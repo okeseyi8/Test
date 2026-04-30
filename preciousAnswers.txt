@@ -1,0 +1,22 @@
+Task 1b - Debug
+
+Bug 1: The variable studentName won't work bacause when it was declared they used 'const' instead of 'let'. So if you know you're going to change the name later like it was done at the end of this code, it's better to use let when declaring it because using const makes the variable constant and the data can't be changed but using let would enable us to change the data anytime.
+
+Bug 2: For the variable studentAge, the value assigned to it is in string which is wrong cause it's meant to be an integer. Because when you try to do some maths to the age it would just bring the numbers together and not solve like maths because javascript will treat the value as a string since the number is having quotes and that would not make let yearsUntilGraduation = studentAge + 2; which is in the code to work because it will be "20" + 2 = "202" and that's not what we want .
+
+Bug 3: The gpa variable too was declared using const and in a real world system gpa of students would be updated so it's better we use let also here so it will enable us to make changes to the students gpa.
+
+Fixed Code
+let studentName = "Alice"; // can be changed anytime in the code now
+let studentAge = 20; // now it's a number and would work in the code
+let gpa = 3.8; // can be updated anytime in the code now 
+
+let yearsUntilGraduation = studentAge + 2; //gives the exact addition
+console.log("GPA x Age:", gpa * studentAge); //gives the exact multiplication
+
+if (studentAge > 18) {
+    console.log("Is an adult");
+}
+
+studentName = "Bob";
+console.log(studentName);
