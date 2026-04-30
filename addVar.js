@@ -1,6 +1,6 @@
 const name = "John Doe";
 const age = 21;
-let gpa = 3.75;
+let gpa = 4.0;
 const isActive = true;
 
 console.log(`Name: ${name}`);

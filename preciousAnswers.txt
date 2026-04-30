@@ -20,3 +20,44 @@ if (studentAge > 18) {
 
 studentName = "Bob";
 console.log(studentName);
+
+Questions Explanation
+
+Question 1 
+Var- is an old way of declaring variables, works just like let but is prone to making someone make mistake while writing code.
+Let- Let is used when the value of the variable is bound to change later.
+Const- Const is used when the value of the variable is constand and not changing.
+
+Question 2
+console.log(typeof null); - it logs out object beccause null means abscence of value which can also be 000. 
+console.log(typeof undefined); - it logs out undefined which is also a type of typeof meaning a variable has been declared but not yet assigned to a value.
+console.log(typeof NaN); it logs out number because NaN means Not a number.
+
+Question 3
+'==' - this means loose equality. It doesn't care if the values are the same datatypes it just tries to make them the same and when they are it gives an answer
+'===' - this means strict equality. It makes sure the datatypes are the same before giving an output and if they're not it gives a false answer.
+console.log("5" == 5); - it logs true because it changes the string "5" to a number then compares them.
+console.log("5" === 5); - it logs false because it checks the datatype and string is not same thing as number.
+console.log(0 == false); - it logs true because in javascript false also means 0 so 0 == 0.
+console.log(0 === false); - it logs false because it checks the datatypes and number is not same thing as boolean.
+
+Task - 2B (DEBUG)
+Bug 1: The iteration i<=score.length is wrong sometimes and can cause error in the code because once i iterates to the index 4 of the array which is the fifth number, it would want to iterate again and look for index five and so on because of the equals to there and sometimes can cause error because there's no number in index five.
+Bug 2: Also the iteration of highScorers is supposed to be highScorers += 1 but in the code highScorers + 1 would just calculate the sum but doesn't  stores it in the variable. So += would enable it to update the variable as the iteration is done.
+Bug 3: No count increment in the while loop and that will js#ust make the count stay in zero forever cause there's no increment command . count++
+Bug 4:
+
+Fixed Code
+const scores = [85, 90, 78, 92, 65];
+let highScorers = 0;
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i] >= 90) {
+        highScorers += 1; 
+    }
+}
+let count = 0;
+while (count < scores.length) {
+    console.log(scores[count]);
+    count++; 
+}
+console.log("High scorers:", highScorers);
