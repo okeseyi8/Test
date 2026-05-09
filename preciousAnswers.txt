@@ -61,3 +61,38 @@ while (count < scores.length) {
     count++; 
 }
 console.log("High scorers:", highScorers);
+
+Task 2B - Questions
+Q1 - For....of is used to get the values of the items in the array.
+     For....in is used to get the index of the values in the array.
+Example of For...of and For...in;
+
+const phones = ["iphone 12", "iphone 13", "iphone 14"];
+
+for(let phone of phones) {
+  console.log(phone);    
+}
+
+for(let phone in phones) {
+  console.log(phone);
+}
+
+Q2 - for(i = 0; i < 5; i++)
+  The numbers are 0,1,2,3,4
+
+Q3 - Break and Continue
+
+Break - is used when we want to stop a loop from running, stating that the loop should stop where we added the break .
+Continue - is used when we want to skip some parts of the code but continue with the rest of the code.
+
+const numbers = [1,2,3,4,5];
+
+for(let num of numbers) {
+  if(num === 3) break;
+  console.log(num);
+}
+
+for(let num of numbers) {
+  if(num % 2 === 0) continue;
+  console.log(num);
+}
