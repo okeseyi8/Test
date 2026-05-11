@@ -96,3 +96,56 @@ for(let num of numbers) {
   if(num % 2 === 0) continue;
   console.log(num);
 }
+
+Task 3B - Debug
+
+Bug 1 - greetStudent function cannot be accessed before initialization, so it has to be called outside the function after initialization.
+What happens - the code stops as soon as it runs because it can't access greetStudent before initialization.
+Why it happens - because the greetStudent was declared as a const and the function was stored inside a const variable and can't be accessed before the initialization.
+How to fix it - move the called greetStudent function below the initialization and then it has acces to it and runs, or we can just declare the function greetStudent then it would work.
+
+Bug 2 -
+What actually logs for original.score: it logs 90
+Why this happens: Because student.score = newScore means we're pointing directly to the student property and changing it's score then the score changed is returned. Then a new score was passed into the updatedScore function as 90 which has replaced the score there before and original.score prints 90.
+How to fix it:
+
+Explain questions - 
+Q1 - Hoisting is a behaviour in javascript whereby a function is called even before declaring the function and the code runs.
+Hoisting in function declaration works because the function is hoisted directly and we can even call the function before it appears in our code.
+Hoisting in function expression only works when the function is called after the initialization of the function but won't work before initialization because in function expression the function is stored in a variable and only the variable is hoisted then so calling the function before initialization won't work and the code will crash even before going to the next line.
+
+Example
+Hoisting in Function Declaration
+  announcement();
+  function announcement() {
+    console.log("Welcome to class!");
+  }
+
+Hoisting in Function expression
+  const announcement = function() {
+    console.log("Welcome to class!");
+  }
+  announcement();
+
+4B - Debug
+  What actually logs: it logs 001234.
+
+  Why this happens: Because for...in loops inside the array to give us the index numbers in strings, that's why the output didn't add up instead they were together. 
+
+  How to fix it: For..of is supposed to be used so we get our values from the array and add them up to give us the expected answer of 150.
+
+  Explain Questions ---
+  Q1 - In javascript object and arrays are reference types because when you create them the variable don't actually holds the data but it serves as an address(reference) to where the data lives in the computer's memory.
+  
+  const a = [1, 2, 3];
+  const b = a;
+  b.push(4);
+  console.log(a);
+
+  This code above logs 1,2,3,4. Because variable b has been referenced to variable a and it now holds variable a data so any changes made to any of them now would affect the other.
+
+Q2 - Null is a term for saying there's no value at all, empty. Undefined is a term whereby a variable has been declared but not yet assigned to a value yet.
+Example ----
+  let winner = null; 
+  if (gradeBook.Eve) winner = "Eve"; 
+  console.log(winner); 

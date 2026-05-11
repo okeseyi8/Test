@@ -252,7 +252,7 @@ Bug 2 (the silent issue):
 **Q1.** What is **hoisting** in JavaScript? How does it behave differently for `function declarations` vs `function expressions`? Write a code example showing where one works before its definition and the other does not.
 
 **Q2.** What is the difference between a **regular function** and an **arrow function** when it comes to `this`? You do not need to explain `this` in full — just explain what is different between the two.
-
+  g
 ---
 ---
 
