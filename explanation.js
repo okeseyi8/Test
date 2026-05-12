@@ -66,22 +66,22 @@
 
 
 
-// const greetStudent = function (name) {
-//     return "Welcome, " + name;
-// };
-// console.log(greetStudent("Alice"));
-// // ---
+const greetStudent = function (name) {
+    return "Welcome, " + name;
+};
+console.log(greetStudent("Alice"));
+// ---
 
-// function updateScore(student, newScore) {
-//     student.score = newScore;
-//     return student;
-// }
+function updateScore(student, newScore) {
+    student.score = newScore;
+    return student;
+}
 
-// const original = { name: "Bob", score: 75 };
-// const updated = updateScore(original, 90);
+const original = { name: "Bob", score: 75 };
+console.log("Original:", original.score);  // Expecting 75
+const updated = updateScore(original, 90);
 
-// console.log("Original:", original.score);  // Expecting 75
-// console.log("Updated:", updated.score);    // Expecting 90
+console.log("Updated:", updated.score);    // Expecting 90
 
 
 
@@ -109,7 +109,7 @@
 // console.log("Total:", total);
 
 
-const a = [1, 2, 3];
-const b = a;
-b.push(4);
-console.log(a);
+// const a = [1, 2, 3];
+// const b = a;
+// b.push(4);
+// console.log(a);

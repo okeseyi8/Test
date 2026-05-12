@@ -107,7 +107,7 @@ How to fix it - move the called greetStudent function below the initialization a
 Bug 2 -
 What actually logs for original.score: it logs 90
 Why this happens: Because student.score = newScore means we're pointing directly to the student property and changing it's score then the score changed is returned. Then a new score was passed into the updatedScore function as 90 which has replaced the score there before and original.score prints 90.
-How to fix it:
+How to fix it: Move the console.log of the original score to the immediate next line of the code so it will log out 75 even before reading the referenced code. Because javascript runs codes line by line.
 
 Explain questions - 
 Q1 - Hoisting is a behaviour in javascript whereby a function is called even before declaring the function and the code runs.
